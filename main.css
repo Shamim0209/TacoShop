@@ -1,174 +1,195 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  /* background: url( "https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?cs=srgb&dl=pexels-roberto-nickson-2775196.jpg&fm=jpg") ; */
-  background-size: cover;
-  font-size: 1.2em;
-  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   */
-  font-family: "Maven Pro", sans-serif;
-
-  font-size: 24px;
-
-  text-align: center;
   background-color: rgb(240, 237, 233);
-  /* background: linear-gradient(
-    to bottom,
-    rgb(0, 191, 255),
-    rgba(0, 191, 255, 0)
-  ); */
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  text-align: center;
 }
-table,
-td,
-tr,
-caption,
-th {
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid rgb(156, 38, 38);
-  border-collapse: collapse;
-  padding: 01rem;
-}
-a {
-  color: rgb(253, 7, 89);
-}
-#tittle {
-  color: #018ddb;
-  font-weight: 800;
-}
-.subtittle {
-  color: #1a7eb2;
-}
-#img_space {
-  height: 300px;
-  width: 50%;
-  /* background: linear-gradient(
-    to right,
-    rgb(141, 213, 231),
-    rgb(89, 89, 233),
-    rgb(241, 142, 241)
-  ); */
-  /* background: linear-gradient(
-    to bottom right,rgb(0, 128, 255),rgba(0, 128, 255,0)
 
-  ); */
-  background: radial-gradient(
-    circle,
-    rgb(238, 255, 0),
-    rgb(22, 51, 214),
-    rgb(204, 22, 52)
-  );
-  /* background-size: cover; */
-  border: 5px solid rgb(74, 63, 235);
-  padding: 20px;
-  margin: 40px;
-}
-#shop_taco {
-  width: fit-content;
-  border: 3px solid rgb(74, 63, 235);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 50px;
-}
-/* #home_img{
-   display: none;
-  float: right;
-} */
-.container {
-  background-color: #d9e6ec;
+#ourMenu {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 20px;
-  height: 600px;
   justify-content: center;
   align-items: center;
-}
-.container-item {
-  background-color: green;
-  color: white;
-  font-size: 40px;
-  width: 100px;
-  line-height: 50px;
-  margin: 20px;
-}
-.grid {
-  /* background-color: rgb(185, 208, 242); */
-  margin: 10px;
-  width: 500px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  /* justify-content: center; */
-  /* justify-content: space-around;
-  align-content: end; */
-  column-gap: 150px;
-  row-gap: 100px;
-}
-.grid_item {
-  font-size: 25px;
   text-align: center;
-  width: 70px;
-  line-height: 200px;
+}
+#menu_table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#menu_table th,
+#menu_table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#menu_table th {
+  background-color: #f2f2f2;
+}
+
+#menu_table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#menu_table th,
+#menu_table td:nth-child(3) {
+  min-width: 100px;
+}
+
+#menu_table th:nth-child(1) {
+  min-width: 150px;
+}
+
+#menu_table td:nth-child(2) {
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin: 20px;
 }
-.form {
-  margin: 20px;
-  padding: 10px 40px;
+
+/* Header */
+#title {
+  color: #018ddb;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
-#form_button {
-  background-color: #088fd7;
-  font-size: 200px;
-  color: white;
-  /* transform: translate(50px,30px); */
-  transition: background 0.7s ease-in-out;
-  padding: 10px 10px;
-  /* transform: scale(2);
-   */
-  /* transform: rotate(-60deg); */
-  /* transform: skewX(45deg); */
-  /* transform: skewY(45deg); */
-  transform: matrix();
-  -webkit-transition: background, padding 500ms ease;
-  -moz-transition: background, padding 500ms ease;
-  -o-transition: background, padding 500ms ease;
+.subtitle {
+  color: #1a7eb2;
 }
-#form_button:hover {
-  background-color: #f10606;
-  /* padding:40px 70px ; */
-  /* transform: translate(50px,30px); */
-}
-#tasty {
-  /* margin: 200px; */
-  /* padding: 50px; */
-  border: #07679b;
-  border-style: solid;
-  border-radius: 5px;
-}
-#aboutLts{
-  /* animation-name: backGroundAnimation;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-direction:alternate-reverse ; */
-  animation: backGroundAnimation 5s linear 1s infinite normal both ;
 
-
+/* Background Animation */
+#aboutLts {
+  animation: backGroundAnimation 5s linear 1s infinite alternate-reverse both;
 }
 
 @keyframes backGroundAnimation {
   0% {
     background: rgb(244, 55, 55);
-    transform: translate(0px, 0px);
   }
+
   50% {
     background: rgb(255, 255, 0);
-    /* transform: translate(10px, 10px); */
   }
+
   100% {
     background: rgb(221, 6, 211);
-    /* transform: translate(20px, 20px); */
+  }
+}
+
+/* Image Section */
+#img_space {
+  height: 300px;
+  width: 80%;
+  background: radial-gradient(circle,
+      rgb(238, 255, 0),
+      rgb(22, 51, 214),
+      rgb(204, 22, 52));
+  border: 5px solid rgb(74, 63, 235);
+  padding: 20px;
+  margin: 40px auto;
+}
+
+/* Shop Section */
+#shop_taco {
+  width: fit-content;
+  border: 3px solid rgb(74, 63, 235);
+  padding: 10px;
+  margin: 50px auto;
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.grid_item {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: #b9d0f2;
+  border: 1px solid rgb(156, 38, 38);
+  border-radius: 5px;
+}
+
+/* Form Section */
+.contact-form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #088fd7;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #088fd7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #f10606;
+}
+
+/* Footer */
+footer {
+  background-color: #1a7eb2;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #img_space {
+    width: 90%;
+  }
+
+  #shop_taco {
+    width: 80%;
   }
 }
